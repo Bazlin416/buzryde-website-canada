@@ -39,7 +39,7 @@ const Services = () => {
   return (
     <div>
       <SEO
-        title="BuzRyde Services – For Riders and Drivers"
+        title="BuzRyde Services"
         description="Explore BuzRyde features for riders and drivers: safe trips, upfront pricing, and fair earnings."
         path="/services"
       />

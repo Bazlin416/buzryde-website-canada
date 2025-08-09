@@ -56,7 +56,7 @@ const faqs = [
 const FAQs = () => (
   <div>
     <SEO
-      title="BuzRyde FAQs – Using the App, Safety, Payments"
+      title="BuzRyde FAQs"
       description="Find answers about BuzRyde rides, payments, safety features, driver onboarding, and more in Canada."
       path="/faqs"
     />

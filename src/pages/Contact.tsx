@@ -9,7 +9,7 @@ const brandLight = "#F5F5F5";
 const Contact = () => (
   <div>
     <SEO
-      title="Contact BuzRyde – Support & Inquiries"
+      title="Contact BuzRyde"
       description="Get in touch with BuzRyde for support, feedback, or partnerships. We’re here to help."
       path="/contact"
     />

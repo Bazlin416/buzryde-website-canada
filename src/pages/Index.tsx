@@ -47,7 +47,7 @@ const Index = () => {
   return (
     <div style={{ backgroundColor: brandLight }}>
       <SEO
-        title="BuzRyde – Reliable Ride Hailing in Canada"
+        title="BuzRyde – Reliable Ride"
         description="BuzRyde connects riders and drivers with fast, safe, and reliable ride hailing across Canada. Download on iOS and Android."
         path="/"
       />

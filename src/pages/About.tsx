@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div>
       <SEO
-        title="About BuzRyde – Our Mission & Story"
+        title="About BuzRyde"
         description="Discover BuzRyde’s mission to connect Canadian communities with fast, safe, and reliable ride hailing."
         path="/about"
       />

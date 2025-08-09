@@ -18,29 +18,20 @@ export const SiteFooter = () => {
     >
       {/* Top Section */}
       <div className="container mx-auto px-4 py-14 grid gap-10 md:grid-cols-5">
-        {/* Brand */}
+
+        {/* Brand + Logo + Social + Badges */}
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <div
-              className="h-8 w-8 rounded-md"
-              style={{
-                background: `linear-gradient(135deg, ${brandTeal}, ${brandGold})`,
-              }}
-              aria-hidden
-            />
-            <span className="text-lg font-bold">{site.name}</span>
-          </div>
           <p className="text-sm max-w-sm leading-relaxed opacity-90">
             Innovative, reliable, and community-driven ride hailing across
             Canada. Connecting riders and drivers, one trip at a time.
           </p>
+
           {/* Social icons */}
           <div className="flex gap-4 mt-4">
             {[
               { icon: Facebook, label: "Facebook" },
               { icon: Instagram, label: "Instagram" },
               { icon: Twitter, label: "Twitter" },
-              { icon: Linkedin, label: "LinkedIn" },
             ].map(({ icon: Icon, label }) => (
               <a
                 key={label}
@@ -59,6 +50,26 @@ export const SiteFooter = () => {
               </a>
             ))}
           </div>
+
+          {/* App Store & Google Play badges */}
+          <div className="flex flex-wrap gap-3 mt-4">
+            <a href="https://apps.apple.com/ke/app/buzryde-ride/id6739767230" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/images/appstore-badge.svg"
+                alt="App Store"
+                className="h-10 w-auto object-contain"
+                loading="lazy"
+              />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.buzryde.com&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
+              <img
+                src="/images/google-play-badge.png"
+                alt="Google Play"
+                className="h-10 w-auto object-contain"
+                loading="lazy"
+              />
+            </a>
+          </div>
         </div>
 
         {/* Company */}
@@ -73,11 +84,6 @@ export const SiteFooter = () => {
             <li>
               <NavLink to="/about" className="hover:underline">
                 About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/testimonials" className="hover:underline">
-                Testimonials
               </NavLink>
             </li>
             <li>
@@ -135,20 +141,6 @@ export const SiteFooter = () => {
               </NavLink>
             </li>
           </ul>
-          <div className="flex gap-3">
-            <img
-              src="/images/appstore-badge.svg"
-              alt="App Store"
-              className="h-10"
-              loading="lazy"
-            />
-            <img
-              src="/images/google-play-badge.png"
-              alt="Google Play"
-              className="h-10"
-              loading="lazy"
-            />
-          </div>
         </div>
 
         {/* Newsletter */}
@@ -215,6 +207,8 @@ export const SiteFooter = () => {
     </footer>
   );
 };
+
+
 
 
 

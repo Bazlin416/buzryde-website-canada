@@ -9,7 +9,7 @@ const brandLight = "#F5F5F5";
 const Drivers = () => (
   <div>
     <SEO
-      title="Drive with BuzRyde – Register Your Interest"
+      title="Drive with BuzRyde"
       description="Earn on your schedule with BuzRyde. Register your interest to drive in Canadian cities."
       path="/drivers"
     />
