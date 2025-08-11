@@ -16,7 +16,7 @@ export const SiteFooter = () => {
       }}
     >
       {/* Top Section */}
-      <div className="container mx-auto px-4 py-14 grid gap-12 md:grid-cols-5">
+      <div className="container mx-auto px-4 py-14 grid gap-12 md:grid-cols-4">
 
         {/* Brand + Logo + Social  */}
         <div className="flex flex-col items-start">
