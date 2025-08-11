@@ -63,12 +63,6 @@ export const SiteFooter = () => {
           </div>
         </div>
 
-        {/* Company */}
-        <FooterColumn title="Company">
-          <FooterLink to="/about">About</FooterLink>
-          <FooterLink to="/download">Download</FooterLink>
-        </FooterColumn>
-
         {/* Support */}
         <FooterColumn title="Support">
           <FooterLink to="/faqs">FAQs</FooterLink>
