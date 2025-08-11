@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { site } from "@/config/site";
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Twitter } from "lucide-react";
 
 // Brand Colors
 const brandTeal = "#337A75";
@@ -10,138 +10,77 @@ const brandLight = "#F5F5F5";
 export const SiteFooter = () => {
   return (
     <footer
-      className="border-t relative"
+      className="relative text-white"
       style={{
         background: `linear-gradient(to bottom, ${brandTeal} 0%, ${brandTeal} 80%, ${brandLight} 100%)`,
-        color: "#fff",
       }}
     >
       {/* Top Section */}
-      <div className="container mx-auto px-4 py-14 grid gap-10 md:grid-cols-5">
+      <div className="container mx-auto px-4 py-14 grid gap-12 md:grid-cols-5">
 
-        {/* Brand + Logo + Social + Badges */}
-        <div>
-          <p className="text-sm max-w-sm leading-relaxed opacity-90">
-            Innovative, reliable, and community-driven ride hailing across
-            Canada. Connecting riders and drivers, one trip at a time.
+        {/* Brand + Logo + Social  */}
+        <div className="flex flex-col items-start">
+          <img
+            src="/images/buzryde-logo.jpg"
+            alt="BuzRyde Logo"
+            className="h-14 w-auto mb-4 rounded-md shadow-md bg-white p-1"
+          />
+          <p className="text-sm max-w-sm leading-relaxed opacity-90 mb-5">
+            Innovative, reliable, and community-driven ride hailing across Canada.
+            Connecting riders and drivers, one trip at a time.
           </p>
 
           {/* Social icons */}
-          <div className="flex gap-4 mt-4">
+          <div className="flex gap-4 mb-5">
             {[
-              { icon: Facebook, label: "Facebook" },
-              { icon: Instagram, label: "Instagram" },
-              { icon: Twitter, label: "Twitter" },
-            ].map(({ icon: Icon, label }) => (
+              {
+                icon: Facebook,
+                label: "Facebook",
+                url: "https://www.facebook.com/BuzRyde"
+              },
+              {
+                icon: Instagram,
+                label: "Instagram",
+                url: "https://www.instagram.com/BuzRyde"
+              },
+              {
+                icon: Twitter,
+                label: "X (Twitter)",
+                url: "https://twitter.com/BuzRyde"
+              },
+            ].map(({ icon: Icon, label, url }) => (
               <a
                 key={label}
-                href="#"
-                className="transition-colors"
-                style={{ color: "#fff" }}
-                onMouseEnter={(e) =>
-                  ((e.target as HTMLElement).style.color = brandGold)
-                }
-                onMouseLeave={(e) =>
-                  ((e.target as HTMLElement).style.color = "#fff")
-                }
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                 aria-label={label}
               >
-                <Icon className="h-5 w-5" />
+                <Icon className="h-5 w-5 text-white" />
               </a>
             ))}
-          </div>
-
-          {/* App Store & Google Play badges */}
-          <div className="flex flex-wrap gap-3 mt-4">
-            <a href="https://apps.apple.com/ke/app/buzryde-ride/id6739767230" target="_blank" rel="noopener noreferrer">
-              <img
-                src="/images/appstore-badge.svg"
-                alt="App Store"
-                className="h-10 w-auto object-contain"
-                loading="lazy"
-              />
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.buzryde.com&pcampaignid=web_share" target="_blank" rel="noopener noreferrer">
-              <img
-                src="/images/google-play-badge.png"
-                alt="Google Play"
-                className="h-10 w-auto object-contain"
-                loading="lazy"
-              />
-            </a>
           </div>
         </div>
 
         {/* Company */}
-        <div>
-          <h3
-            className="text-sm font-semibold mb-4 uppercase tracking-wide"
-            style={{ color: brandGold }}
-          >
-            Company
-          </h3>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <NavLink to="/about" className="hover:underline">
-                About
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/download" className="hover:underline">
-                Download
-              </NavLink>
-            </li>
-          </ul>
-        </div>
+        <FooterColumn title="Company">
+          <FooterLink to="/about">About</FooterLink>
+          <FooterLink to="/download">Download</FooterLink>
+        </FooterColumn>
 
         {/* Support */}
-        <div>
-          <h3
-            className="text-sm font-semibold mb-4 uppercase tracking-wide"
-            style={{ color: brandGold }}
-          >
-            Support
-          </h3>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <NavLink to="/faqs" className="hover:underline">
-                FAQs
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact" className="hover:underline">
-                Contact
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/drivers" className="hover:underline">
-                Driver Signup
-              </NavLink>
-            </li>
-          </ul>
-        </div>
+        <FooterColumn title="Support">
+          <FooterLink to="/faqs">FAQs</FooterLink>
+          <FooterLink to="/contact">Contact</FooterLink>
+          <FooterLink to="/drivers">Driver Signup</FooterLink>
+        </FooterColumn>
 
         {/* Legal */}
-        <div>
-          <h3
-            className="text-sm font-semibold mb-4 uppercase tracking-wide"
-            style={{ color: brandGold }}
-          >
-            Legal
-          </h3>
-          <ul className="space-y-2 text-sm mb-4">
-            <li>
-              <NavLink to="/terms" className="hover:underline">
-                Terms of Service
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/privacy" className="hover:underline">
-                Privacy Policy
-              </NavLink>
-            </li>
-          </ul>
-        </div>
+        <FooterColumn title="Legal">
+          <FooterLink to="/terms">Terms of Service</FooterLink>
+          <FooterLink to="/privacy">Privacy Policy</FooterLink>
+        </FooterColumn>
 
         {/* Newsletter */}
         <div>
@@ -152,8 +91,7 @@ export const SiteFooter = () => {
             Stay Updated
           </h3>
           <p className="text-sm opacity-90 mb-3">
-            Get the latest updates on new features, driver opportunities, and
-            exclusive offers.
+            Get the latest updates on new features, driver opportunities, and exclusive offers.
           </p>
           <form
             onSubmit={(e) => {
@@ -174,7 +112,7 @@ export const SiteFooter = () => {
             />
             <button
               type="submit"
-              className="px-4 py-2 text-sm rounded-md transition-colors w-full sm:w-auto"
+              className="px-4 py-2 text-sm rounded-md transition-colors w-full sm:w-auto font-medium"
               style={{
                 backgroundColor: brandGold,
                 color: "#000",
@@ -201,12 +139,37 @@ export const SiteFooter = () => {
         }}
       >
         <div className="container mx-auto px-4 py-6 text-xs flex flex-col md:flex-row items-center justify-between gap-3">
-          <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} {site.name}. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
   );
 };
+
+// Footer Column Component
+const FooterColumn = ({ title, children }: { title: string; children: React.ReactNode }) => (
+  <div>
+    <h3
+      className="text-sm font-semibold mb-4 uppercase tracking-wide"
+      style={{ color: brandGold }}
+    >
+      {title}
+    </h3>
+    <ul className="space-y-2 text-sm">{children}</ul>
+  </div>
+);
+
+// Footer Link Component
+const FooterLink = ({ to, children }: { to: string; children: React.ReactNode }) => (
+  <li>
+    <NavLink to={to} className="hover:underline">
+      {children}
+    </NavLink>
+  </li>
+);
+
 
 
 

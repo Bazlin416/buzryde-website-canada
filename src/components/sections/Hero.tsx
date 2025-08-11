@@ -61,8 +61,8 @@ export const Hero = () => {
 
             {/* Description */}
             <p className="text-base sm:text-lg max-w-xl leading-relaxed text-gray-900">
-              Seamlessly connect with nearby drivers and get where you’re going —
-              reliably, affordably, and safely — anytime, anywhere in Canada.
+              Seamlessly connect with nearby drivers and get where you’re going -
+              reliably, affordably, and safely - anytime, anywhere in Canada.
             </p>
 
             {/* Unified Button Grid */}
@@ -96,33 +96,6 @@ export const Hero = () => {
                   Explore services
                 </Button>
               </a>
-
-              {/* App Badges */}
-              <div className="grid grid-cols-2 gap-3 pt-3 w-full sm:w-auto">
-                <a
-                  href="https://apps.apple.com/ke/app/buzryde-ride/id6739767230"
-                  className="block w-full"
-                >
-                  <img
-                    src="/images/appstore-badge.svg"
-                    alt="App Store"
-                    className="w-full max-w-[160px] h-auto object-contain mx-auto"
-                    loading="lazy"
-                  />
-                </a>
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.buzryde.com&pcampaignid=web_share"
-                  className="block w-full"
-                >
-                  <img
-                    src="/images/google-play-badge.png"
-                    alt="Google Play"
-                    className="w-full max-w-[160px] h-auto object-contain mx-auto"
-                    loading="lazy"
-                  />
-                </a>
-              </div>
-
             </div>
 
             {/* Highlights */}

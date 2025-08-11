@@ -167,7 +167,7 @@ const Download = () => (
           ride-hailing network.
         </p>
         <div className="flex items-center justify-center gap-4 flex-wrap">
-          <a href="#" aria-label="Download on the App Store">
+          <a href="https://apps.apple.com/ke/app/buzryde-ride/id6739767230" aria-label="Download on the App Store">
             <img
               src="/images/appstore-badge.svg"
               alt="Download on the App Store"
@@ -175,7 +175,7 @@ const Download = () => (
               loading="lazy"
             />
           </a>
-          <a href="#" aria-label="Get it on Google Play">
+          <a href="https://play.google.com/store/apps/details?id=com.buzryde.com&pcampaignid=web_share" aria-label="Get it on Google Play">
             <img
               src="/images/google-play-badge.png"
               alt="Get it on Google Play"

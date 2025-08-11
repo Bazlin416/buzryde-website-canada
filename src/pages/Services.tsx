@@ -185,7 +185,7 @@ const Services = () => {
             who trust BuzRyde for their daily journeys.
           </p>
           <a
-            href="/signup"
+            href="/drivers"
             className="px-6 py-3 rounded-lg font-semibold"
             style={{
               backgroundColor: brandLight,
